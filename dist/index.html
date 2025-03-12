@@ -1,0 +1,1075 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="/dist/style.css" rel="stylesheet">
+  <!-- SplideJS CSS -->
+  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css"> -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Pacifico&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="src/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <title>Courses</title>
+
+</head>
+
+<body>
+
+
+
+  <nav class="px-6 py-4 bg-[#6176F7] fixed top-0 left-0 w-full  z-50">
+    <div class=" w-full max-w-screen-xl px-5 md:px-5 lg:px-16 xl:px-50 mx-auto flex justify-between items-center">
+      
+      <h1 class="text-3xl font-['PT Serif',serif] text-white font-bold italic">
+        <span class="text-paleyellow">e</span>Dex
+      </h1>
+
+      <!-- Navigation Menu (Hidden on Mobile, Inline on Desktop) -->
+      <div class="hidden md:flex space-x-4 text-lg text-white">
+        <a class="hover:text-amber-600" href="#" aria-current="page">Home</a>
+        <a class="hover:text-amber-600" href="#">About</a>
+        <a class="hover:text-amber-600" href="#">Course</a>
+        <a class="hover:text-amber-600" href="#">Blog</a>
+        <a class="hover:text-amber-600" href="#">Content</a>
+      </div>
+
+      <!-- Right Section (Login & Signup) -->
+      <div class="hidden md:flex items-center space-x-4 text-white">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+          class="size-6">
+          <path stroke-linecap="round" stroke-linejoin="round"
+            d="M16.5 10.5V6.75a4.5 4.5 0 1 0-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 0 0 2.25-2.25v-6.75a2.25-2.25 0 0 0-2.25-2.25H6.75a2.25 2.25 0 0 0-2.25 2.25v6.75a2.25 2.25 0 0 0 2.25 2.25Z" />
+        </svg>
+        <a class="hover:text-amber-600" href="#">Login</a>
+        <a class="bg-[#FFA337] rounded-full py-2 px-4 mx-3 hover:bg-amber-600" href="#">Sign up for free</a>
+      </div>
+
+      <!-- Hamburger Button (Right-aligned on Mobile) -->
+      <button class="md:hidden text-white focus:outline-none" onclick="openMenu()">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
+          class="size-8">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16m-7 6h7" />
+        </svg>
+      </button>
+    </div>
+
+    <!-- Mobile Menu (Slide in from Right to Left) -->
+    <div id="mobile-menu"
+      class="fixed top-0 right-0 h-full w-64 bg-blue-900 text-white flex flex-col items-center space-y-6 text-lg pt-20 transform translate-x-full transition-transform duration-300 ease-in-out">
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Course</a>
+      <a href="#">Blog</a>
+      <a href="#">Content</a>
+      <a href="#">Login</a>
+      <a href="#" class="bg-[#FFA337] rounded-full py-2 px-4">Sign up for free</a>
+
+      <!-- Close Button -->
+      <button class="absolute top-4 right-4" onclick="closeMenu()">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
+          class="size-6">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+    </div>
+  </nav>
+
+  <script>
+    function openMenu() {
+      let mobileMenu = document.getElementById("mobile-menu");
+      if (mobileMenu) {
+        mobileMenu.classList.remove("translate-x-full");
+        mobileMenu.classList.add("translate-x-0");
+      } else {
+        console.error("mobile-menu element not found");
+      }
+    }
+
+    function closeMenu() {
+      let mobileMenu = document.getElementById("mobile-menu");
+      if (mobileMenu) {
+        mobileMenu.classList.remove("translate-x-0");
+        mobileMenu.classList.add("translate-x-full");
+      } else {
+        console.error("mobile-menu element not found");
+      }
+    }
+  </script>
+
+
+  <section id="success" class="bg-[#6176F7]">
+
+
+    <div class="py-30 w-full px-6 md:px-5 lg:px-16 xl:px-50 mx-auto flex">
+      <div data-aos="fade-right" data-aos-duration="1500" class="flex flex-col w-1/2 justify-center ">
+        <h4 class="uppercase text-[#FFA337] py-3">start to success</h4>
+        <p class="text-3xl text-white mt-5">Access To 5000+ Courses
+          from 300 Instructors
+          & Institutions</p>
+        <p class="text-gray-400 text-xs mt-5">Various versions have evolved over the years, sometimes by accident,</p>
+        <form class="mt-7">
+          <input type="search" id="search" class=" w-90 md:w-100 p-4 ps-10 text-sm rounded-full bg-white "
+            placeholder="What do want to learn?" required />
+
+        </form>
+
+      </div>
+
+      <div data-aos="fade-left" data-aos-duration="1500" class="hidden md:block lg:block w-1/2">
+        <img src="images/yaahh.png" alt="Success Illustration" class="w-full max-w-lg">
+      </div>
+
+    </div>
+
+  </section>
+
+  <section class="achivments ">
+
+    <div
+      class=" md:px-5 lg:px-16 xl:px-50 mx-auto grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-4 bg-gray-300 py-7 px-5">
+
+      <div data-aos="fade-up" data-aos-duration="1500" class="flex">
+        <img  src="images/successhat.png" alt="">
+        <div class="ml-5 flex flex-col justify-center">
+          <h3 class="text-black">300</h3>
+          <p class="text-gray-600">Instructor</p>
+        </div>
+      </div>
+
+      <div data-aos="fade-down" data-aos-duration="1500" class="flex">
+        <img src="images/people.png" alt="">
+        <div class="ml-5 flex flex-col justify-center">
+          <h3 class="text-black">20,000+</h3>
+          <p class="text-gray-600">student</p>
+        </div>
+      </div>
+
+      <div data-aos="fade-up" data-aos-duration="1500" class="flex">
+        <img src="images/record.png" alt="">
+        <div class="ml-5 flex flex-col justify-center">
+          <h3 class="text-black">10,000+</h3>
+          <p class="text-gray-600">record</p>
+        </div>
+      </div>
+
+      <div data-aos="fade-down" data-aos-duration="1500" class="flex">
+        <img src="images/more-people.png" alt="">
+        <div class="ml-5 flex flex-col justify-center">
+          <h3 class="text-black">1,000,00+</h3>
+          <p class="text-gray-600">Users</p>
+        </div>
+      </div>
+
+
+    </div>
+
+  </section>
+
+  <section class="py-20">
+    <div class="mx-auto px-5 md:px-5 lg:px-16 xl:px-50">
+      <h2 data-aos="fade-down" class="text-4xl font-bold">Most <span class="text-blue-500">Popular Course</span> </h2>
+      <p data-aos="fade-down" class="pb-5 text-xs text-gray-400 pt-5 md:pt-5 xl:pt-5">Various versions have evolved over the years, sometimes
+        by accident,</p>
+
+
+      <div class="swiper mySwiper">
+        <div data-aos="fade-left" data-aos-duration="1500" class="swiper-wrapper">
+
+          <div class="swiper-slide bg-white p-5 shadow-lg rounded-lg">
+            <span class="absolute top-6 left-7 bg-gray-100 text-gray-700 text-xs font-semibold px-3 py-1 rounded-md">
+              HTML
+            </span>
+            <img src="images/Sample 12.png" class="w-full h-48 object-cover rounded-lg" alt="Product Image">
+            <p class=" mt-3 text-gray-600">Various versions have evolved </p>
+            <div class="flex ">
+              <p class="text-yellow-500 mt-2">⭐⭐⭐⭐☆</p>
+              <p class="text-gray-400 pt-2 ps-2">(15)</p>
+            </div>
+
+            <div class="border-t mt-3 pt-3"></div>
+            <div class="flex justify-between">
+              <p class="text-lg font-semibold text-green-600">$29.99</p>
+              <a href="#">
+                <img src="images/sahm-fady.png" alt="">
+              </a>
+            </div>
+          </div>
+
+          <div class="swiper-slide bg-white p-5 shadow-lg rounded-lg">
+            <span class="absolute top-6 left-7 bg-gray-100 text-gray-700 text-xs font-semibold px-3 py-1 rounded-md">
+              Design
+            </span>
+            <img src="images/Sample 26.png" class="w-full h-48 object-cover rounded-lg" alt="Product Image">
+            <p class=" mt-3 text-gray-600">Various versions have evolved </p>
+            <p class="text-yellow-500 mt-2">⭐⭐⭐⭐⭐</p>
+            <div class="border-t mt-3 pt-3"></div>
+            <div class="flex justify-between">
+              <p class="text-lg font-semibold text-green-600">$39.99</p>
+              <a href="#">
+                <img src="images/sahm-fady.png" alt="">
+              </a>
+            </div>
+          </div>
+
+          <div class="swiper-slide bg-white p-5 shadow-lg rounded-lg">
+            <span class="absolute top-6 left-7 bg-gray-100 text-gray-700 text-xs font-semibold px-3 py-1 rounded-md">
+              Business
+            </span>
+            <img src="images/Sample 46.png" class="w-full h-48 object-cover rounded-lg" alt="Product Image">
+            <p class=" mt-3 text-gray-600">Various versions have evolved </p>
+            <p class="text-yellow-500 mt-2">⭐⭐⭐⭐☆</p>
+            <div class="border-t mt-3 pt-3"></div>
+            <div class="flex justify-between">
+              <p class="text-lg font-semibold text-green-600">$29.99</p>
+              <a href="#">
+                <img src="images/sahm-fady.png" alt="">
+              </a>
+            </div>
+          </div>
+
+          <div class="swiper-slide bg-white p-5 shadow-lg rounded-lg">
+            <span class="absolute top-6 left-7 bg-gray-100 text-gray-700 text-xs font-semibold px-3 py-1 rounded-md">
+              Business
+            </span>
+            <img src="images/Sample 26.png" class="w-full h-48 object-cover rounded-lg" alt="Product Image">
+            <p class=" mt-3 text-gray-600">Various versions have evolved </p>
+            <p class="text-yellow-500 mt-2">⭐⭐⭐⭐☆</p>
+            <div class="border-t mt-3 pt-3"></div>
+            <div class="flex justify-between">
+              <p class="text-lg font-semibold text-green-600">$29.99</p>
+              <a href="#">
+                <img src="images/sahm-fady.png" alt="">
+              </a>
+            </div>
+          </div>
+
+          <div class="swiper-slide bg-white p-5 shadow-lg rounded-lg">
+            <span class="absolute top-6 left-7 bg-gray-100 text-gray-700 text-xs font-semibold px-3 py-1 rounded-md">
+              PHP
+            </span>
+            <img src="images/fly.png" class="w-full h-48 object-cover rounded-lg" alt="Product Image">
+            <p class=" mt-3 text-gray-600">Various versions have evolved </p>
+            <p class="text-yellow-500 mt-2">⭐⭐⭐⭐☆</p>
+            <div class="border-t mt-3 pt-3"></div>
+            <div class="flex justify-between">
+              <p class="text-lg font-semibold text-green-600">$29.99</p>
+              <a href="#">
+                <img src="images/sahm-fady.png" alt="">
+              </a>
+            </div>
+          </div>
+
+          <div class="swiper-slide bg-white p-5 shadow-lg rounded-lg">
+            <span class="absolute top-6 left-7 bg-gray-100 text-gray-700 text-xs font-semibold px-3 py-1 rounded-md">
+              HTML
+            </span>
+            <img src="images/Sample 12.png" class="w-full h-48 object-cover rounded-lg" alt="Product Image">
+            <p class=" mt-3 text-gray-600">Various versions have evolved </p>
+            <p class="text-yellow-500 mt-2">⭐⭐⭐⭐☆</p>
+            <div class="border-t mt-3 pt-3 opacity-90 w-ful"></div>
+            <div class="flex justify-between">
+              <p class="text-lg font-semibold text-green-600">$49.99</p>
+              <a href="#">
+                <img src="images/sahm-fady.png" alt="">
+              </a>
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- Navigation Buttons -->
+
+        <div class="swiper-button-next "></div>
+        <div class="swiper-button-prev "></div>
+
+
+
+        <!-- Pagination Dots -->
+        <div class="pt-15">
+          <div class="swiper-pagination "></div>
+        </div>
+
+
+
+        <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+        <script>
+          var swiper = new Swiper(".mySwiper", {
+            slidesPerView: 1,
+            spaceBetween: 20,
+            loop: true,
+            navigation: {
+              nextEl: ".swiper-button-next",
+              prevEl: ".swiper-button-prev",
+            },
+            pagination: {
+              el: ".swiper-pagination",
+              clickable: true,
+            },
+            breakpoints: {
+              640: { slidesPerView: 2 },
+              1024: { slidesPerView: 4 }
+            }
+          });
+        </script>
+
+
+      </div>
+    </div>
+
+  </section>
+
+
+  <section class="py-20 bg-gray-300">
+    <div class="mx-auto px-5 md:px-5 lg:px-16 xl:px-50">
+      <h2 data-aos="zoom-in-up" class="text-4xl font-bold">Most <span class="text-blue-500">Popular Skil</span> </h2>
+      <p data-aos="zoom-in-up" class="pb-5 text-xs text-gray-400 pt-5 md:pt-5 xl:pt-5">Various versions have evolved over the years, sometimes
+        by accident,</p>
+
+      <div class="grid md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-4 gap-4">
+        <div>
+          <button data-aos="zoom-in"
+            class="flex w-full flex-1 justify-between items-center bg-white border border-[#FFBD59] rounded-2xl py-2 px-2 shadow-sm  hover:shadow-[0px_0px_20px_2px_#FFBD59] transition-shadow duration-300">
+
+            <div>
+              <svg class="w-10 h-10 " viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                <g id="SVGRepo_iconCarrier">
+                  <path
+                    d="M14.8686 4.13134L14.1615 3.42423L14.1615 3.42423L14.8686 4.13134ZM7.81459 7.48152L8.08931 8.44304L7.81459 7.48152ZM5.57564 9.83884L6.55004 10.0637V10.0637L5.57564 9.83884ZM3 21L2.02561 20.7751C1.94808 21.1111 2.04909 21.4633 2.29289 21.7071C2.5367 21.9509 2.8889 22.0519 3.22486 21.9744L3 21ZM14.1611 18.4243L13.9363 17.4499L13.9363 17.4499L14.1611 18.4243ZM16.5185 16.1854L15.5569 15.9107L16.5185 16.1854ZM19.8686 9.13134L20.5757 9.83845V9.83845L19.8686 9.13134ZM19.8686 6.8686L19.1615 7.57571H19.1615L19.8686 6.8686ZM17.1314 4.13134L17.8385 3.42423V3.42423L17.1314 4.13134ZM20.5368 8.30899L19.5858 7.99997L20.5368 8.30899ZM20.5368 7.69095L19.5858 7.99997L20.5368 7.69095ZM15.4404 18.0251L15.9601 18.8794H15.9601L15.4404 18.0251ZM16.0539 17.4424L16.8804 18.0054L16.8804 18.0054L16.0539 17.4424ZM6.55756 7.94607L7.12056 8.77253L7.12056 8.77253L6.55756 7.94607ZM5.97487 8.55957L6.82922 9.07928L6.82922 9.07928L5.97487 8.55957ZM15.691 3.46313L15.382 2.51207L15.691 3.46313ZM16.309 3.46313L16.618 2.51207L16.618 2.51207L16.309 3.46313ZM9.14645 16.2676C9.53697 15.8771 9.53697 15.2439 9.14644 14.8534C8.75591 14.4629 8.12275 14.4629 7.73223 14.8534L9.14645 16.2676ZM10 14.5C10 14.7761 9.77614 15 9.5 15V17C10.8807 17 12 15.8807 12 14.5H10ZM9.5 15C9.22386 15 9 14.7761 9 14.5H7C7 15.8807 8.11929 17 9.5 17V15ZM9 14.5C9 14.2238 9.22386 14 9.5 14V12C8.11929 12 7 13.1193 7 14.5H9ZM9.5 14C9.77614 14 10 14.2238 10 14.5H12C12 13.1193 10.8807 12 9.5 12V14ZM14.1615 3.42423L12.2929 5.29286L13.7071 6.70708L15.5757 4.83845L14.1615 3.42423ZM12.7253 5.03845L7.53987 6.51999L8.08931 8.44304L13.2747 6.96149L12.7253 5.03845ZM4.60125 9.61398L2.02561 20.7751L3.97439 21.2248L6.55004 10.0637L4.60125 9.61398ZM3.22486 21.9744L14.386 19.3987L13.9363 17.4499L2.77514 20.0256L3.22486 21.9744ZM17.48 16.4601L18.9615 11.2747L17.0385 10.7252L15.5569 15.9107L17.48 16.4601ZM18.7071 11.7071L20.5757 9.83845L19.1615 8.42424L17.2929 10.2929L18.7071 11.7071ZM20.5757 6.16149L17.8385 3.42423L16.4243 4.83845L19.1615 7.57571L20.5757 6.16149ZM20.5757 9.83845C20.7621 9.65211 20.9449 9.47038 21.0858 9.30446C21.2342 9.12961 21.3938 8.90772 21.4879 8.618L19.5858 7.99997C19.6057 7.93858 19.6292 7.92986 19.5611 8.01011C19.4854 8.09928 19.3712 8.21456 19.1615 8.42424L20.5757 9.83845ZM19.1615 7.57571C19.3712 7.78538 19.4854 7.90066 19.5611 7.98984C19.6292 8.07008 19.6057 8.06136 19.5858 7.99997L21.4879 7.38194C21.3938 7.09222 21.2342 6.87033 21.0858 6.69548C20.9449 6.52957 20.7621 6.34783 20.5757 6.16149L19.1615 7.57571ZM21.4879 8.618C21.6184 8.21632 21.6184 7.78362 21.4879 7.38194L19.5858 7.99997V7.99997L21.4879 8.618ZM14.386 19.3987C14.988 19.2598 15.5141 19.1507 15.9601 18.8794L14.9207 17.1708C14.8157 17.2346 14.6727 17.28 13.9363 17.4499L14.386 19.3987ZM15.5569 15.9107C15.3493 16.6373 15.2966 16.7778 15.2274 16.8794L16.8804 18.0054C17.1743 17.574 17.3103 17.0541 17.48 16.4601L15.5569 15.9107ZM15.9601 18.8794C16.3257 18.6571 16.6395 18.359 16.8804 18.0054L15.2274 16.8794C15.1471 16.9973 15.0426 17.0966 14.9207 17.1708L15.9601 18.8794ZM7.53987 6.51999C6.94585 6.68971 6.426 6.82571 5.99457 7.11961L7.12056 8.77253C7.22213 8.70334 7.36263 8.65066 8.08931 8.44304L7.53987 6.51999ZM6.55004 10.0637C6.71998 9.32729 6.76535 9.18427 6.82922 9.07928L5.12053 8.03986C4.84922 8.48586 4.74017 9.01202 4.60125 9.61398L6.55004 10.0637ZM5.99457 7.11961C5.64092 7.36052 5.34291 7.67429 5.12053 8.03986L6.82922 9.07928C6.90334 8.95742 7.00268 8.85283 7.12056 8.77253L5.99457 7.11961ZM15.5757 4.83845C15.7854 4.62878 15.9007 4.51459 15.9899 4.43889C16.0701 4.37076 16.0614 4.39424 16 4.41418L15.382 2.51207C15.0922 2.60621 14.8704 2.76578 14.6955 2.91421C14.5296 3.05506 14.3479 3.2379 14.1615 3.42423L15.5757 4.83845ZM17.8385 3.42423C17.6521 3.23789 17.4704 3.05506 17.3045 2.91421C17.1296 2.76578 16.9078 2.60621 16.618 2.51207L16 4.41418C15.9386 4.39424 15.9299 4.37077 16.0101 4.43889C16.0993 4.51459 16.2146 4.62877 16.4243 4.83845L17.8385 3.42423ZM16 4.41418H16L16.618 2.51207C16.2163 2.38156 15.7837 2.38156 15.382 2.51207L16 4.41418ZM12.2929 6.70708L17.2929 11.7071L18.7071 10.2929L13.7071 5.29286L12.2929 6.70708ZM7.73223 14.8534L2.29289 20.2929L3.70711 21.7071L9.14645 16.2676L7.73223 14.8534Z"
+                    fill="#000000"></path>
+                </g>
+              </svg>
+            </div>
+
+            <p class="font-bold ">Design</p>
+            <div>
+              <img src="images/sahm-fady.png" alt="">
+            </div>
+          </button>
+        </div>
+
+        <div>
+          <button data-aos="zoom-in"
+            class="flex w-full flex-1 justify-between items-center bg-white border border-[#FFBD59] rounded-2xl shadow-sm px-4 py-2 hover:shadow-[0px_0px_20px_2px_#FFBD59] transition-shadow duration-300">
+
+            <div>
+              <svg class="w-10 h-10 " viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg" fill="#000000">
+                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                <g id="SVGRepo_iconCarrier">
+                  <defs>
+                    <style>
+                      .cls-1 {
+                        fill: #101010;
+                      }
+                    </style>
+                  </defs>
+                  <title></title>
+                  <g id="xxx-word">
+                    <path class="cls-1" d="M325,105H250a5,5,0,0,1-5-5V25a5,5,0,1,1,10,0V95h70a5,5,0,0,1,0,10Z"></path>
+                    <path class="cls-1"
+                      d="M325,154.83a5,5,0,0,1-5-5V102.07L247.93,30H100A20,20,0,0,0,80,50v98.17a5,5,0,0,1-10,0V50a30,30,0,0,1,30-30H250a5,5,0,0,1,3.54,1.46l75,75A5,5,0,0,1,330,100v49.83A5,5,0,0,1,325,154.83Z">
+                    </path>
+                    <path class="cls-1"
+                      d="M300,380H100a30,30,0,0,1-30-30V275a5,5,0,0,1,10,0v75a20,20,0,0,0,20,20H300a20,20,0,0,0,20-20V275a5,5,0,0,1,10,0v75A30,30,0,0,1,300,380Z">
+                    </path>
+                    <path class="cls-1" d="M275,280H125a5,5,0,1,1,0-10H275a5,5,0,0,1,0,10Z"></path>
+                    <path class="cls-1" d="M200,330H125a5,5,0,1,1,0-10h75a5,5,0,0,1,0,10Z"></path>
+                    <path class="cls-1"
+                      d="M325,280H75a30,30,0,0,1-30-30V173.17a30,30,0,0,1,30-30h.2l250,1.66a30.09,30.09,0,0,1,29.81,30V250A30,30,0,0,1,325,280ZM75,153.17a20,20,0,0,0-20,20V250a20,20,0,0,0,20,20H325a20,20,0,0,0,20-20V174.83a20.06,20.06,0,0,0-19.88-20l-250-1.66Z">
+                    </path>
+                    <path class="cls-1"
+                      d="M148.48,236h-9.61V212.84H118.52V236h-9.61V182.68h9.61v21.91h20.35V182.68h9.61Z"></path>
+                    <path class="cls-1" d="M178.83,236H168.52V190.92H154.34v-8.24H193v8.24H178.83Z"></path>
+                    <path class="cls-1"
+                      d="M251.17,236h-9.8V189.32L226.6,236h-5l-14.84-46.68V236h-7.85V182.68h15L225.08,217l11-34.34h15.12Z">
+                    </path>
+                    <path class="cls-1" d="M295.74,236H262.93V182.68H273v44.61h22.7Z"></path>
+                  </g>
+                </g>
+              </svg>
+            </div>
+
+            <p class="font-bold ">Devlopment</p>
+            <div>
+              <img src="images/sahm-fady.png" alt="">
+            </div>
+          </button>
+        </div>
+
+        <div>
+          <button data-aos="zoom-in"
+            class="flex w-full flex-1 justify-between items-center bg-white border border-[#FFBD59] rounded-2xl shadow-sm px-4 py-2 hover:shadow-[0px_0px_20px_2px_#FFBD59] transition-shadow duration-300">
+
+            <div>
+              <svg class="w-10 h-10 " viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                <g id="SVGRepo_iconCarrier">
+                  <path
+                    d="M19 10V12C19 15.866 15.866 19 12 19M5 10V12C5 15.866 8.13401 19 12 19M12 19V22M8 22H16M15 6H13M15 10H13M12 15C10.3431 15 9 13.6569 9 12V5C9 3.34315 10.3431 2 12 2C13.6569 2 15 3.34315 15 5V12C15 13.6569 13.6569 15 12 15Z"
+                    stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                </g>
+              </svg>
+            </div>
+
+            <p class="font-bold ">Marketing</p>
+            <div>
+              <img src="images/sahm-fady.png" alt="">
+            </div>
+          </button>
+        </div>
+
+        <div>
+          <button data-aos="zoom-in"
+            class="flex w-full flex-1 justify-between items-center bg-white border border-[#FFBD59] rounded-2xl shadow-sm px-4 py-2 hover:shadow-[0px_0px_20px_2px_#FFBD59] transition-shadow duration-300">
+
+            <div>
+              <svg class="w-10 h-10 " viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                <g id="SVGRepo_iconCarrier">
+                  <path
+                    d="M4 12V9C4 8.44771 4.44772 8 5 8H9M4 12V17C4 17.5523 4.44772 18 5 18H19C19.5523 18 20 17.5523 20 17V12M4 12L11 13H13L20 12M20 12V9C20 8.44771 19.5523 8 19 8H15M9 8V7C9 6.44772 9.44772 6 10 6H14C14.5523 6 15 6.44772 15 7V8M9 8H15M11 14.5H13"
+                    stroke="#464455" stroke-linecap="round" stroke-linejoin="round"></path>
+                </g>
+              </svg>
+            </div>
+
+            <p class="font-bold ">Business</p>
+            <div>
+              <img src="images/sahm-fady.png" alt="">
+            </div>
+          </button>
+        </div>
+
+        <div class="md:pt-6 lg:pt-6 xl:pt-6">
+          <button data-aos="zoom-in"
+            class="flex w-full flex-1 justify-between items-center bg-white border border-[#FFBD59] rounded-2xl shadow-sm px-4 py-2 hover:shadow-[0px_0px_20px_2px_#FFBD59] transition-shadow duration-300">
+
+            <div>
+              <svg class="w-10 h-10 " viewBox="0 -1 30 30" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns"
+                fill="#000000">
+                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                <g id="SVGRepo_iconCarrier">
+                  <title>sunset</title>
+                  <desc>Created with Sketch Beta.</desc>
+                  <defs> </defs>
+                  <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+                    <g id="Icon-Set" sketch:type="MSLayerGroup" transform="translate(-257.000000, -829.000000)"
+                      fill="#000000">
+                      <path
+                        d="M285,851 L259,851 C258.448,851 258,851.448 258,852 C258,852.553 258.448,853 259,853 L285,853 C285.552,853 286,852.553 286,852 C286,851.448 285.552,851 285,851 L285,851 Z M260,837.414 C260.391,837.805 261.024,837.805 261.414,837.414 C261.805,837.023 261.805,836.391 261.414,836 L260,834.586 C259.609,834.195 258.977,834.195 258.586,834.586 C258.195,834.977 258.195,835.609 258.586,836 L260,837.414 L260,837.414 Z M286,847 L258,847 C257.448,847 257,847.447 257,848 C257,848.553 257.448,849 258,849 L286,849 C286.552,849 287,848.553 287,848 C287,847.447 286.552,847 286,847 L286,847 Z M282,855 L262,855 C261.448,855 261,855.448 261,856 C261,856.553 261.448,857 262,857 L282,857 C282.552,857 283,856.553 283,856 C283,855.448 282.552,855 282,855 L282,855 Z M272,833 C272.552,833 273,832.553 273,832 L273,830 C273,829.447 272.552,829 272,829 C271.448,829 271,829.447 271,830 L271,832 C271,832.553 271.448,833 272,833 L272,833 Z M284,837.414 L285.414,836 C285.805,835.609 285.805,834.977 285.414,834.586 C285.024,834.195 284.391,834.195 284,834.586 L282.586,836 C282.195,836.391 282.195,837.023 282.586,837.414 C282.977,837.805 283.609,837.805 284,837.414 L284,837.414 Z M262.218,845 C263.146,840.438 267.161,837 272,837 C276.839,837 280.854,840.438 281.782,845 L283.886,845 C283.118,839.359 278.096,835 272,835 C265.904,835 260.882,839.359 260.114,845 L262.218,845 L262.218,845 Z"
+                        id="sunset" sketch:type="MSShapeGroup"> </path>
+                    </g>
+                  </g>
+                </g>
+              </svg>
+            </div>
+
+            <p class="font-bold ">LifeStyle</p>
+            <div>
+              <img src="images/sahm-fady.png" alt="">
+            </div>
+          </button>
+        </div>
+
+        <div class="md:pt-6 lg:pt-6 xl:pt-6">
+          <button data-aos="zoom-in"
+            class="flex w-full flex-1 justify-between items-center bg-white border border-[#FFBD59] rounded-2xl shadow-sm px-4 py-2 hover:shadow-[0px_0px_20px_2px_#FFBD59] transition-shadow duration-300">
+
+            <div>
+              <svg class="w-10 h-10 " viewBox="0 -1 30 30" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns"
+                fill="#000000">
+                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                <g id="SVGRepo_iconCarrier">
+                  <title>sunset</title>
+                  <desc>Created with Sketch Beta.</desc>
+                  <defs> </defs>
+                  <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+                    <g id="Icon-Set" sketch:type="MSLayerGroup" transform="translate(-257.000000, -829.000000)"
+                      fill="#000000">
+                      <path
+                        d="M285,851 L259,851 C258.448,851 258,851.448 258,852 C258,852.553 258.448,853 259,853 L285,853 C285.552,853 286,852.553 286,852 C286,851.448 285.552,851 285,851 L285,851 Z M260,837.414 C260.391,837.805 261.024,837.805 261.414,837.414 C261.805,837.023 261.805,836.391 261.414,836 L260,834.586 C259.609,834.195 258.977,834.195 258.586,834.586 C258.195,834.977 258.195,835.609 258.586,836 L260,837.414 L260,837.414 Z M286,847 L258,847 C257.448,847 257,847.447 257,848 C257,848.553 257.448,849 258,849 L286,849 C286.552,849 287,848.553 287,848 C287,847.447 286.552,847 286,847 L286,847 Z M282,855 L262,855 C261.448,855 261,855.448 261,856 C261,856.553 261.448,857 262,857 L282,857 C282.552,857 283,856.553 283,856 C283,855.448 282.552,855 282,855 L282,855 Z M272,833 C272.552,833 273,832.553 273,832 L273,830 C273,829.447 272.552,829 272,829 C271.448,829 271,829.447 271,830 L271,832 C271,832.553 271.448,833 272,833 L272,833 Z M284,837.414 L285.414,836 C285.805,835.609 285.805,834.977 285.414,834.586 C285.024,834.195 284.391,834.195 284,834.586 L282.586,836 C282.195,836.391 282.195,837.023 282.586,837.414 C282.977,837.805 283.609,837.805 284,837.414 L284,837.414 Z M262.218,845 C263.146,840.438 267.161,837 272,837 C276.839,837 280.854,840.438 281.782,845 L283.886,845 C283.118,839.359 278.096,835 272,835 C265.904,835 260.882,839.359 260.114,845 L262.218,845 L262.218,845 Z"
+                        id="sunset" sketch:type="MSShapeGroup"> </path>
+                    </g>
+                  </g>
+                </g>
+              </svg>
+            </div>
+
+            <p class="font-bold ">LifeStyle</p>
+            <div>
+              <img src="images/sahm-fady.png" alt="">
+            </div>
+          </button>
+        </div>
+
+        <div class="md:pt-6 lg:pt-6 xl:pt-6">
+          <button data-aos="zoom-in"
+            class="flex w-full flex-1 justify-between items-center bg-white border border-[#FFBD59] rounded-2xl shadow-sm px-4 py-2 hover:shadow-[0px_0px_20px_2px_#FFBD59] transition-shadow duration-300">
+
+            <div>
+              <svg class="w-10 h-10 " viewBox="0 -1 30 30" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns"
+                fill="#000000">
+                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                <g id="SVGRepo_iconCarrier">
+                  <title>sunset</title>
+                  <desc>Created with Sketch Beta.</desc>
+                  <defs> </defs>
+                  <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+                    <g id="Icon-Set" sketch:type="MSLayerGroup" transform="translate(-257.000000, -829.000000)"
+                      fill="#000000">
+                      <path
+                        d="M285,851 L259,851 C258.448,851 258,851.448 258,852 C258,852.553 258.448,853 259,853 L285,853 C285.552,853 286,852.553 286,852 C286,851.448 285.552,851 285,851 L285,851 Z M260,837.414 C260.391,837.805 261.024,837.805 261.414,837.414 C261.805,837.023 261.805,836.391 261.414,836 L260,834.586 C259.609,834.195 258.977,834.195 258.586,834.586 C258.195,834.977 258.195,835.609 258.586,836 L260,837.414 L260,837.414 Z M286,847 L258,847 C257.448,847 257,847.447 257,848 C257,848.553 257.448,849 258,849 L286,849 C286.552,849 287,848.553 287,848 C287,847.447 286.552,847 286,847 L286,847 Z M282,855 L262,855 C261.448,855 261,855.448 261,856 C261,856.553 261.448,857 262,857 L282,857 C282.552,857 283,856.553 283,856 C283,855.448 282.552,855 282,855 L282,855 Z M272,833 C272.552,833 273,832.553 273,832 L273,830 C273,829.447 272.552,829 272,829 C271.448,829 271,829.447 271,830 L271,832 C271,832.553 271.448,833 272,833 L272,833 Z M284,837.414 L285.414,836 C285.805,835.609 285.805,834.977 285.414,834.586 C285.024,834.195 284.391,834.195 284,834.586 L282.586,836 C282.195,836.391 282.195,837.023 282.586,837.414 C282.977,837.805 283.609,837.805 284,837.414 L284,837.414 Z M262.218,845 C263.146,840.438 267.161,837 272,837 C276.839,837 280.854,840.438 281.782,845 L283.886,845 C283.118,839.359 278.096,835 272,835 C265.904,835 260.882,839.359 260.114,845 L262.218,845 L262.218,845 Z"
+                        id="sunset" sketch:type="MSShapeGroup"> </path>
+                    </g>
+                  </g>
+                </g>
+              </svg>
+            </div>
+
+            <p class="font-bold ">LifeStyle</p>
+            <div>
+              <img src="images/sahm-fady.png" alt="">
+            </div>
+          </button>
+        </div>
+
+        <div class="md:pt-6 lg:pt-6 xl:pt-6">
+          <button data-aos="zoom-in"
+            class="flex w-full flex-1 justify-between items-center bg-white border border-[#FFBD59] rounded-2xl shadow-sm px-4 py-2 hover:shadow-[0px_0px_20px_2px_#FFBD59] transition-shadow duration-300">
+
+            <div>
+              <svg class="w-10 h-10 " viewBox="0 -1 30 30" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns"
+                fill="#000000">
+                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                <g id="SVGRepo_iconCarrier">
+                  <title>sunset</title>
+                  <desc>Created with Sketch Beta.</desc>
+                  <defs> </defs>
+                  <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+                    <g id="Icon-Set" sketch:type="MSLayerGroup" transform="translate(-257.000000, -829.000000)"
+                      fill="#000000">
+                      <path
+                        d="M285,851 L259,851 C258.448,851 258,851.448 258,852 C258,852.553 258.448,853 259,853 L285,853 C285.552,853 286,852.553 286,852 C286,851.448 285.552,851 285,851 L285,851 Z M260,837.414 C260.391,837.805 261.024,837.805 261.414,837.414 C261.805,837.023 261.805,836.391 261.414,836 L260,834.586 C259.609,834.195 258.977,834.195 258.586,834.586 C258.195,834.977 258.195,835.609 258.586,836 L260,837.414 L260,837.414 Z M286,847 L258,847 C257.448,847 257,847.447 257,848 C257,848.553 257.448,849 258,849 L286,849 C286.552,849 287,848.553 287,848 C287,847.447 286.552,847 286,847 L286,847 Z M282,855 L262,855 C261.448,855 261,855.448 261,856 C261,856.553 261.448,857 262,857 L282,857 C282.552,857 283,856.553 283,856 C283,855.448 282.552,855 282,855 L282,855 Z M272,833 C272.552,833 273,832.553 273,832 L273,830 C273,829.447 272.552,829 272,829 C271.448,829 271,829.447 271,830 L271,832 C271,832.553 271.448,833 272,833 L272,833 Z M284,837.414 L285.414,836 C285.805,835.609 285.805,834.977 285.414,834.586 C285.024,834.195 284.391,834.195 284,834.586 L282.586,836 C282.195,836.391 282.195,837.023 282.586,837.414 C282.977,837.805 283.609,837.805 284,837.414 L284,837.414 Z M262.218,845 C263.146,840.438 267.161,837 272,837 C276.839,837 280.854,840.438 281.782,845 L283.886,845 C283.118,839.359 278.096,835 272,835 C265.904,835 260.882,839.359 260.114,845 L262.218,845 L262.218,845 Z"
+                        id="sunset" sketch:type="MSShapeGroup"> </path>
+                    </g>
+                  </g>
+                </g>
+              </svg>
+            </div>
+
+            <p class="font-bold ">Health & Fitness</p>
+            <div>
+              <img src="images/sahm-fady.png" alt="">
+            </div>
+          </button>
+        </div>
+
+        <div class="md:pt-6 lg:pt-6 xl:pt-6">
+          <button data-aos="zoom-in"
+            class="flex w-full flex-1 justify-between items-center bg-white border border-[#FFBD59] rounded-2xl shadow-sm px-4 py-2 hover:shadow-[0px_0px_20px_2px_#FFBD59] transition-shadow duration-300">
+
+            <div>
+              <svg class="w-10 h-10 " viewBox="0 -1 30 30" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns"
+                fill="#000000">
+                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                <g id="SVGRepo_iconCarrier">
+                  <title>sunset</title>
+                  <desc>Created with Sketch Beta.</desc>
+                  <defs> </defs>
+                  <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+                    <g id="Icon-Set" sketch:type="MSLayerGroup" transform="translate(-257.000000, -829.000000)"
+                      fill="#000000">
+                      <path
+                        d="M285,851 L259,851 C258.448,851 258,851.448 258,852 C258,852.553 258.448,853 259,853 L285,853 C285.552,853 286,852.553 286,852 C286,851.448 285.552,851 285,851 L285,851 Z M260,837.414 C260.391,837.805 261.024,837.805 261.414,837.414 C261.805,837.023 261.805,836.391 261.414,836 L260,834.586 C259.609,834.195 258.977,834.195 258.586,834.586 C258.195,834.977 258.195,835.609 258.586,836 L260,837.414 L260,837.414 Z M286,847 L258,847 C257.448,847 257,847.447 257,848 C257,848.553 257.448,849 258,849 L286,849 C286.552,849 287,848.553 287,848 C287,847.447 286.552,847 286,847 L286,847 Z M282,855 L262,855 C261.448,855 261,855.448 261,856 C261,856.553 261.448,857 262,857 L282,857 C282.552,857 283,856.553 283,856 C283,855.448 282.552,855 282,855 L282,855 Z M272,833 C272.552,833 273,832.553 273,832 L273,830 C273,829.447 272.552,829 272,829 C271.448,829 271,829.447 271,830 L271,832 C271,832.553 271.448,833 272,833 L272,833 Z M284,837.414 L285.414,836 C285.805,835.609 285.805,834.977 285.414,834.586 C285.024,834.195 284.391,834.195 284,834.586 L282.586,836 C282.195,836.391 282.195,837.023 282.586,837.414 C282.977,837.805 283.609,837.805 284,837.414 L284,837.414 Z M262.218,845 C263.146,840.438 267.161,837 272,837 C276.839,837 280.854,840.438 281.782,845 L283.886,845 C283.118,839.359 278.096,835 272,835 C265.904,835 260.882,839.359 260.114,845 L262.218,845 L262.218,845 Z"
+                        id="sunset" sketch:type="MSShapeGroup"> </path>
+                    </g>
+                  </g>
+                </g>
+              </svg>
+            </div>
+
+            <p class="font-bold ">Personal Develop</p>
+            <div>
+              <img src="images/sahm-fady.png" alt="">
+            </div>
+          </button>
+        </div>
+
+        <div class="md:pt-6 lg:pt-6 xl:pt-6">
+          <button data-aos="zoom-in"
+            class="flex w-full flex-1 justify-between items-center bg-white border border-[#FFBD59] rounded-2xl shadow-sm px-4 py-2 hover:shadow-[0px_0px_20px_2px_#FFBD59] transition-shadow duration-300">
+
+            <div>
+              <svg class="w-10 h-10 " viewBox="0 -1 30 30" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns"
+                fill="#000000">
+                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                <g id="SVGRepo_iconCarrier">
+                  <title>sunset</title>
+                  <desc>Created with Sketch Beta.</desc>
+                  <defs> </defs>
+                  <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+                    <g id="Icon-Set" sketch:type="MSLayerGroup" transform="translate(-257.000000, -829.000000)"
+                      fill="#000000">
+                      <path
+                        d="M285,851 L259,851 C258.448,851 258,851.448 258,852 C258,852.553 258.448,853 259,853 L285,853 C285.552,853 286,852.553 286,852 C286,851.448 285.552,851 285,851 L285,851 Z M260,837.414 C260.391,837.805 261.024,837.805 261.414,837.414 C261.805,837.023 261.805,836.391 261.414,836 L260,834.586 C259.609,834.195 258.977,834.195 258.586,834.586 C258.195,834.977 258.195,835.609 258.586,836 L260,837.414 L260,837.414 Z M286,847 L258,847 C257.448,847 257,847.447 257,848 C257,848.553 257.448,849 258,849 L286,849 C286.552,849 287,848.553 287,848 C287,847.447 286.552,847 286,847 L286,847 Z M282,855 L262,855 C261.448,855 261,855.448 261,856 C261,856.553 261.448,857 262,857 L282,857 C282.552,857 283,856.553 283,856 C283,855.448 282.552,855 282,855 L282,855 Z M272,833 C272.552,833 273,832.553 273,832 L273,830 C273,829.447 272.552,829 272,829 C271.448,829 271,829.447 271,830 L271,832 C271,832.553 271.448,833 272,833 L272,833 Z M284,837.414 L285.414,836 C285.805,835.609 285.805,834.977 285.414,834.586 C285.024,834.195 284.391,834.195 284,834.586 L282.586,836 C282.195,836.391 282.195,837.023 282.586,837.414 C282.977,837.805 283.609,837.805 284,837.414 L284,837.414 Z M262.218,845 C263.146,840.438 267.161,837 272,837 C276.839,837 280.854,840.438 281.782,845 L283.886,845 C283.118,839.359 278.096,835 272,835 C265.904,835 260.882,839.359 260.114,845 L262.218,845 L262.218,845 Z"
+                        id="sunset" sketch:type="MSShapeGroup"> </path>
+                    </g>
+                  </g>
+                </g>
+              </svg>
+            </div>
+
+            <p class="font-bold ">Data Science</p>
+            <div>
+              <img src="images/sahm-fady.png" alt="">
+            </div>
+          </button>
+        </div>
+
+        <div class="md:pt-6 lg:pt-6 xl:pt-6">
+          <button data-aos="zoom-in"
+            class="flex w-full flex-1 justify-between items-center bg-white border border-[#FFBD59] rounded-2xl shadow-sm px-4 py-2 hover:shadow-[0px_0px_20px_2px_#FFBD59] transition-shadow duration-300">
+
+            <div>
+              <svg class="w-10 h-10 " viewBox="0 -1 30 30" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns"
+                fill="#000000">
+                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                <g id="SVGRepo_iconCarrier">
+                  <title>sunset</title>
+                  <desc>Created with Sketch Beta.</desc>
+                  <defs> </defs>
+                  <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+                    <g id="Icon-Set" sketch:type="MSLayerGroup" transform="translate(-257.000000, -829.000000)"
+                      fill="#000000">
+                      <path
+                        d="M285,851 L259,851 C258.448,851 258,851.448 258,852 C258,852.553 258.448,853 259,853 L285,853 C285.552,853 286,852.553 286,852 C286,851.448 285.552,851 285,851 L285,851 Z M260,837.414 C260.391,837.805 261.024,837.805 261.414,837.414 C261.805,837.023 261.805,836.391 261.414,836 L260,834.586 C259.609,834.195 258.977,834.195 258.586,834.586 C258.195,834.977 258.195,835.609 258.586,836 L260,837.414 L260,837.414 Z M286,847 L258,847 C257.448,847 257,847.447 257,848 C257,848.553 257.448,849 258,849 L286,849 C286.552,849 287,848.553 287,848 C287,847.447 286.552,847 286,847 L286,847 Z M282,855 L262,855 C261.448,855 261,855.448 261,856 C261,856.553 261.448,857 262,857 L282,857 C282.552,857 283,856.553 283,856 C283,855.448 282.552,855 282,855 L282,855 Z M272,833 C272.552,833 273,832.553 273,832 L273,830 C273,829.447 272.552,829 272,829 C271.448,829 271,829.447 271,830 L271,832 C271,832.553 271.448,833 272,833 L272,833 Z M284,837.414 L285.414,836 C285.805,835.609 285.805,834.977 285.414,834.586 C285.024,834.195 284.391,834.195 284,834.586 L282.586,836 C282.195,836.391 282.195,837.023 282.586,837.414 C282.977,837.805 283.609,837.805 284,837.414 L284,837.414 Z M262.218,845 C263.146,840.438 267.161,837 272,837 C276.839,837 280.854,840.438 281.782,845 L283.886,845 C283.118,839.359 278.096,835 272,835 C265.904,835 260.882,839.359 260.114,845 L262.218,845 L262.218,845 Z"
+                        id="sunset" sketch:type="MSShapeGroup"> </path>
+                    </g>
+                  </g>
+                </g>
+              </svg>
+            </div>
+
+            <p class="font-bold ">Music</p>
+            <div>
+              <img src="images/sahm-fady.png" alt="">
+            </div>
+          </button>
+        </div>
+
+        <div class="md:pt-6 lg:pt-6 xl:pt-6">
+          <button data-aos="zoom-in"
+            class="flex w-full flex-1 justify-between items-center bg-white border border-[#FFBD59] rounded-2xl shadow-sm px-4 py-2 hover:shadow-[0px_0px_20px_2px_#FFBD59] transition-shadow duration-300">
+
+            <div>
+              <svg class="w-10 h-10 " viewBox="0 -1 30 30" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns"
+                fill="#000000">
+                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                <g id="SVGRepo_iconCarrier">
+                  <title>sunset</title>
+                  <desc>Created with Sketch Beta.</desc>
+                  <defs> </defs>
+                  <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+                    <g id="Icon-Set" sketch:type="MSLayerGroup" transform="translate(-257.000000, -829.000000)"
+                      fill="#000000">
+                      <path
+                        d="M285,851 L259,851 C258.448,851 258,851.448 258,852 C258,852.553 258.448,853 259,853 L285,853 C285.552,853 286,852.553 286,852 C286,851.448 285.552,851 285,851 L285,851 Z M260,837.414 C260.391,837.805 261.024,837.805 261.414,837.414 C261.805,837.023 261.805,836.391 261.414,836 L260,834.586 C259.609,834.195 258.977,834.195 258.586,834.586 C258.195,834.977 258.195,835.609 258.586,836 L260,837.414 L260,837.414 Z M286,847 L258,847 C257.448,847 257,847.447 257,848 C257,848.553 257.448,849 258,849 L286,849 C286.552,849 287,848.553 287,848 C287,847.447 286.552,847 286,847 L286,847 Z M282,855 L262,855 C261.448,855 261,855.448 261,856 C261,856.553 261.448,857 262,857 L282,857 C282.552,857 283,856.553 283,856 C283,855.448 282.552,855 282,855 L282,855 Z M272,833 C272.552,833 273,832.553 273,832 L273,830 C273,829.447 272.552,829 272,829 C271.448,829 271,829.447 271,830 L271,832 C271,832.553 271.448,833 272,833 L272,833 Z M284,837.414 L285.414,836 C285.805,835.609 285.805,834.977 285.414,834.586 C285.024,834.195 284.391,834.195 284,834.586 L282.586,836 C282.195,836.391 282.195,837.023 282.586,837.414 C282.977,837.805 283.609,837.805 284,837.414 L284,837.414 Z M262.218,845 C263.146,840.438 267.161,837 272,837 C276.839,837 280.854,840.438 281.782,845 L283.886,845 C283.118,839.359 278.096,835 272,835 C265.904,835 260.882,839.359 260.114,845 L262.218,845 L262.218,845 Z"
+                        id="sunset" sketch:type="MSShapeGroup"> </path>
+                    </g>
+                  </g>
+                </g>
+              </svg>
+            </div>
+
+            <p class="font-bold ">Photography</p>
+            <div>
+              <img src="images/sahm-fady.png" alt="">
+            </div>
+          </button>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <section class="py-20">
+    <div class="mx-auto px-5 md:px-5 lg:px-16 xl:px-50">
+        <h2 data-aos="fade-down" class="text-4xl font-bold">Our <span class="text-blue-500">Best Instructor</span> </h2>
+        <p data-aos="fade-down" class="pb-5 text-xs text-gray-400 pt-5">Various versions have evolved over the years, sometimes by accident.</p>
+
+        <div class="swiper mySwiper relative">
+            <div data-aos="fade-right" data-aos-duration="1500" class="swiper-wrapper">
+                <div class="swiper-slide bg-white p-5 shadow-lg rounded-3xl">
+                    <img src="images/jacob1.png" class="w-full h-48 object-cover rounded-lg" alt="Instructor">
+                    <div class="text-center">
+                        <p class="mt-3 text-gray-700">Jacob Jonath</p>
+                        <p class="mt-1 text-gray-400">UI/UX Design Expert</p>
+                    </div>
+                </div>
+
+                <div class="swiper-slide bg-white p-5 shadow-lg rounded-3xl">
+                    <img src="images/jacob3.png" class="w-full h-48 object-cover rounded-lg" alt="Instructor">
+                    <div class="text-center">
+                        <p class="mt-3 text-gray-700">Jacob Jonath</p>
+                        <p class="mt-1 text-gray-400">UI/UX Design Expert</p>
+                    </div>
+                </div>
+
+                <div class="swiper-slide bg-white p-5 shadow-lg rounded-3xl">
+                    <img src="images/jacob2.png" class="w-full h-48 object-cover rounded-lg" alt="Instructor">
+                    <div class="text-center">
+                        <p class="mt-3 text-gray-700">Jacob Jonath</p>
+                        <p class="mt-1 text-gray-400">UI/UX Design Expert</p>
+                    </div>
+                </div>
+
+                <div class="swiper-slide bg-white p-5 shadow-lg rounded-3xl">
+                  <img src="images/jacob4.png" class="w-full h-48 object-cover rounded-lg" alt="Instructor">
+                  <div class="text-center">
+                      <p class="mt-3 text-gray-700">Jacob Jonath</p>
+                      <p class="mt-1 text-gray-400">UI/UX Design Expert</p>
+                  </div>
+              </div>
+
+            </div>
+
+          <div class="pt-15">
+            <div class="swiper-button-next text-black"></div>
+            <div class="swiper-button-prev text-black"></div>
+          </div>
+
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>
+</section>
+
+
+<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+<script>
+    var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 1,
+        spaceBetween: 20,
+        loop: true,
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+        breakpoints: {
+            640: { slidesPerView: 2 },
+            1024: { slidesPerView: 3 }
+        }
+    });
+</script>
+  
+  
+        </div>
+    </div>
+
+
+  </section>
+
+  <section class="bg-[#F8F4FF] py-20">
+    <div class="mx-auto px-5 md:px-5 lg:px-16 xl:px-50">
+      <h2 data-aos="fade-down" class="text-4xl font-bold">Student <span class="text-blue-500">Feedback</span> </h2>
+      <p data-aos="fade-down" class="pb-5 text-xs text-gray-400 pt-5 md:pt-5 xl:pt-5">Various versions have evolved over the years, sometimes
+        by accident,</p>
+
+        <div class="swiper mySwiper relative">
+          <div data-aos="fade-right" class="swiper-wrapper">
+
+              <div class="swiper-slide bg-white p-5 shadow-lg rounded-3xl">
+                <div class="flex justify-between">
+                   <img src="images/jacob1.png" class="w-10 h-10 rounded-3xl" alt="Instructor">
+                  <div class="flex flex-col">
+                   <p class="ml-3 text-gray-700">Jacob Jonath</p>
+                   <p class="ml-3 text-gray-400">UI/UX Designer</p>
+                  </div>
+                  <svg class="w-10 h-10" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M15.9082 12.3714H20.5982C20.5182 17.0414 19.5982 17.8114 16.7282 19.5114C16.3982 19.7114 16.2882 20.1314 16.4882 20.4714C16.6882 20.8014 17.1082 20.9114 17.4482 20.7114C20.8282 18.7114 22.0082 17.4914 22.0082 11.6714V6.28141C22.0082 4.57141 20.6182 3.19141 18.9182 3.19141H15.9182C14.1582 3.19141 12.8282 4.52141 12.8282 6.28141V9.28141C12.8182 11.0414 14.1482 12.3714 15.9082 12.3714Z" fill="#e56510"></path> <path d="M5.09 12.3714H9.78C9.7 17.0414 8.78 17.8114 5.91 19.5114C5.58 19.7114 5.47 20.1314 5.67 20.4714C5.87 20.8014 6.29 20.9114 6.63 20.7114C10.01 18.7114 11.19 17.4914 11.19 11.6714V6.28141C11.19 4.57141 9.8 3.19141 8.1 3.19141H5.1C3.33 3.19141 2 4.52141 2 6.28141V9.28141C2 11.0414 3.33 12.3714 5.09 12.3714Z" 
+                    fill="#e56510"></path> </g></svg>
+ 
+                </div>
+
+                <p class="pt-5 ">Ut pharetra ipsum nec leo blandit, sit amet tincidunt eros pharetra. Nam sed imperdiet turpis. In hac habitasse platea dictumst. 
+                  Praesent nulla massa, hendrerit vestibulum gravida in, feugiat auctor felis.</p>
+                 
+              </div>
+
+              
+              <div class="swiper-slide bg-white p-5 shadow-lg rounded-3xl">
+                <div class="flex justify-between">
+                   <img src="images/jacob1.png" class="w-10 h-10 rounded-3xl" alt="Instructor">
+                  <div class="flex flex-col">
+                   <p class="ml-3 text-gray-700">Jacob Jonath</p>
+                   <p class="ml-3 text-gray-400">UI/UX Designer</p>
+                  </div>
+                  <svg class="w-10 h-10" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M15.9082 12.3714H20.5982C20.5182 17.0414 19.5982 17.8114 16.7282 19.5114C16.3982 19.7114 16.2882 20.1314 16.4882 20.4714C16.6882 20.8014 17.1082 20.9114 17.4482 20.7114C20.8282 18.7114 22.0082 17.4914 22.0082 11.6714V6.28141C22.0082 4.57141 20.6182 3.19141 18.9182 3.19141H15.9182C14.1582 3.19141 12.8282 4.52141 12.8282 6.28141V9.28141C12.8182 11.0414 14.1482 12.3714 15.9082 12.3714Z" fill="#e56510"></path> <path d="M5.09 12.3714H9.78C9.7 17.0414 8.78 17.8114 5.91 19.5114C5.58 19.7114 5.47 20.1314 5.67 20.4714C5.87 20.8014 6.29 20.9114 6.63 20.7114C10.01 18.7114 11.19 17.4914 11.19 11.6714V6.28141C11.19 4.57141 9.8 3.19141 8.1 3.19141H5.1C3.33 3.19141 2 4.52141 2 6.28141V9.28141C2 11.0414 3.33 12.3714 5.09 12.3714Z" 
+                    fill="#e56510"></path> </g></svg>
+ 
+                </div>
+
+                <p class="pt-5 ">Ut pharetra ipsum nec leo blandit, sit amet tincidunt eros pharetra. Nam sed imperdiet turpis. In hac habitasse platea dictumst. 
+                  Praesent nulla massa, hendrerit vestibulum gravida in, feugiat auctor felis.</p>
+                 
+              </div>
+
+              
+              <div class="swiper-slide bg-white p-5 shadow-lg rounded-3xl">
+                <div class="flex justify-between">
+                   <img src="images/jacob1.png" class="w-10 h-10 rounded-3xl" alt="Instructor">
+                  <div class="flex flex-col">
+                   <p class="ml-3 text-gray-700">Jacob Jonath</p>
+                   <p class="ml-3 text-gray-400">UI/UX Designer</p>
+                  </div>
+                  <svg class="w-10 h-10" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M15.9082 12.3714H20.5982C20.5182 17.0414 19.5982 17.8114 16.7282 19.5114C16.3982 19.7114 16.2882 20.1314 16.4882 20.4714C16.6882 20.8014 17.1082 20.9114 17.4482 20.7114C20.8282 18.7114 22.0082 17.4914 22.0082 11.6714V6.28141C22.0082 4.57141 20.6182 3.19141 18.9182 3.19141H15.9182C14.1582 3.19141 12.8282 4.52141 12.8282 6.28141V9.28141C12.8182 11.0414 14.1482 12.3714 15.9082 12.3714Z" fill="#e56510"></path> <path d="M5.09 12.3714H9.78C9.7 17.0414 8.78 17.8114 5.91 19.5114C5.58 19.7114 5.47 20.1314 5.67 20.4714C5.87 20.8014 6.29 20.9114 6.63 20.7114C10.01 18.7114 11.19 17.4914 11.19 11.6714V6.28141C11.19 4.57141 9.8 3.19141 8.1 3.19141H5.1C3.33 3.19141 2 4.52141 2 6.28141V9.28141C2 11.0414 3.33 12.3714 5.09 12.3714Z" 
+                    fill="#e56510"></path> </g></svg>
+ 
+                </div>
+
+                <p class="pt-5 ">Ut pharetra ipsum nec leo blandit, sit amet tincidunt eros pharetra. Nam sed imperdiet turpis. In hac habitasse platea dictumst. 
+                  Praesent nulla massa, hendrerit vestibulum gravida in, feugiat auctor felis.</p>
+                 
+              </div>
+
+              
+              <div class="swiper-slide bg-white p-5 shadow-lg rounded-3xl">
+                <div class="flex justify-between">
+                   <img src="images/jacob1.png" class="w-10 h-10 rounded-3xl" alt="Instructor">
+                  <div class="flex flex-col">
+                   <p class="ml-3 text-gray-700">Jacob Jonath</p>
+                   <p class="ml-3 text-gray-400">UI/UX Designer</p>
+                  </div>
+                  <svg class="w-10 h-10" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M15.9082 12.3714H20.5982C20.5182 17.0414 19.5982 17.8114 16.7282 19.5114C16.3982 19.7114 16.2882 20.1314 16.4882 20.4714C16.6882 20.8014 17.1082 20.9114 17.4482 20.7114C20.8282 18.7114 22.0082 17.4914 22.0082 11.6714V6.28141C22.0082 4.57141 20.6182 3.19141 18.9182 3.19141H15.9182C14.1582 3.19141 12.8282 4.52141 12.8282 6.28141V9.28141C12.8182 11.0414 14.1482 12.3714 15.9082 12.3714Z" fill="#e56510"></path> <path d="M5.09 12.3714H9.78C9.7 17.0414 8.78 17.8114 5.91 19.5114C5.58 19.7114 5.47 20.1314 5.67 20.4714C5.87 20.8014 6.29 20.9114 6.63 20.7114C10.01 18.7114 11.19 17.4914 11.19 11.6714V6.28141C11.19 4.57141 9.8 3.19141 8.1 3.19141H5.1C3.33 3.19141 2 4.52141 2 6.28141V9.28141C2 11.0414 3.33 12.3714 5.09 12.3714Z" 
+                    fill="#e56510"></path> </g></svg>
+ 
+                </div>
+
+                <p class="pt-5 ">Ut pharetra ipsum nec leo blandit, sit amet tincidunt eros pharetra. Nam sed imperdiet turpis. In hac habitasse platea dictumst. 
+                  Praesent nulla massa, hendrerit vestibulum gravida in, feugiat auctor felis.</p>
+                 
+              </div>
+
+ 
+
+         
+          </div>
+
+          
+          <div class="swiper-button-next text-black"></div>
+          <div class="swiper-button-prev text-black"></div>
+
+          <div class="pt-15">
+            <div class="swiper-pagination"></div>
+          </div>
+          
+      </div>
+  </div>
+</section>
+
+
+<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+<script>
+  var swiper = new Swiper(".mySwiper", {
+      slidesPerView: 1,
+      spaceBetween: 20,
+      loop: true,
+      navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+      },
+      pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+      },
+      breakpoints: {
+          640: { slidesPerView: 2 },
+          1024: { slidesPerView: 3 }
+      }
+  });
+</script>
+    </div>
+  </section>
+
+  <section class="py-20">
+    <div class="mx-auto px-5 md:px-5 lg:px-16 xl:px-50">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 items-center">
+            
+            <div class="relative w-full flex justify-center">
+                <img data-aos="fade-down"  data-aos-duration="1500" class="w-64" src="images/Ellipse 18.png" alt="">
+                <img data-aos="fade-right"  data-aos-duration="1500" class="absolute top-0 right-0 w-96" src="images/Saly-1.png" alt="">
+            </div>
+
+            <div data-aos="zoom-in-left"  data-aos-duration="1500" class="max-w-lg">
+                <h2 class="text-4xl font-bold">
+                    Join <span class="text-blue-500">World's largest</span> learning platform today
+                </h2>
+                <p class="text-gray-600 pt-5 text-lg">Start learning by registering for free</p>
+                <p class="text-gray-400 pt-5">
+                    Ut pharetra ipsum nec leo blandit, sit amet tincidunt eros pharetra. Nam sed imperdiet turpis. 
+                    In hac habitasse platea dictumst. Praesent nulla massa, hendrerit vestibulum gravida in, feugiat auctor felis.
+                </p>
+
+                <button class="mt-6 px-6 py-3 bg-orange-400 text-white font-semibold rounded-full cursor-pointer hover:bg-orange-700">
+                    Sign up for Free
+                </button>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<footer  class="py-20 bg-[#21212F]">
+  <div class="mx-auto px-5 md:px-5 lg:px-16 xl:px-50">
+    <div data-aos="fade-right"
+    data-aos-offset="300"
+    data-aos-easing="ease-in-sine" class="flex flex-col md:grid md:grid-cols-4 lg:grid lg:grid-cols-4 xl:grid xl:grid-cols-4 gap-8">
+
+      <div class="flex flex-col text-center md:text-left">
+        <h3 class="text-3xl font-bold text-white"> <span class="text-amber-400">e</span> Dex</h3>
+        <p class="text-white pt-2 font-bold text-2xl">Contact Us</p>
+        <p class="text-gray-300 pt-3">Call : +123 400 123</p>
+        <p class="text-gray-300 pt-3">Praesent nulla massa, hendrerit vestibulum gravida in, feugiat auctor felis.</p>
+        <p class="text-gray-300 pt-3">Email: example@mail.com</p>
+        <div class="flex justify-center md:justify-start">
+          
+          <svg class="w-10 h-10 cursor" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21ZM12 21V13.0001M12 13.0001V10.0001C12 8.02404 13.3537 7.03622 15.5 7.18462M12 13.0001L15 13.0001M12 13.0001H9" stroke="#234fd1" stroke-width="2"
+             stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+          
+             <svg class="w-10 h-10" viewBox="0 -0.5 25 25" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path fill-rule="evenodd" clip-rule="evenodd" d="M15.5 5H9.5C7.29086 5 5.5 6.79086 5.5 9V15C5.5 17.2091 7.29086 19 9.5 19H15.5C17.7091 19 19.5 17.2091 19.5 15V9C19.5 6.79086 17.7091 5 15.5 5Z" stroke="#d22d56" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> <path fill-rule="evenodd" clip-rule="evenodd" d="M12.5 15C10.8431 15 9.5 13.6569 9.5 12C9.5 10.3431 10.8431 9 12.5 9C14.1569 9 15.5 10.3431 15.5 12C15.5 12.7956 15.1839 13.5587 14.6213 14.1213C14.0587 14.6839 13.2956 15 12.5 15Z" stroke="#d22d56" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> <rect x="15.5" y="9" width="2" height="2" rx="1" transform="rotate(-90 15.5 9)" fill="#d22d56"></rect> <rect x="16" y="8.5" width="1" height="1" rx="0.5" transform="rotate(-90 16 8.5)"
+               stroke="#d22d56" stroke-linecap="round"></rect> </g></svg>
+               
+               <svg class="w-10 h-10"  viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M6.5 8C7.32843 8 8 7.32843 8 6.5C8 5.67157 7.32843 5 6.5 5C5.67157 5 5 5.67157 5 6.5C5 7.32843 5.67157 8 6.5 8Z" fill="#3661e2"></path> <path d="M5 10C5 9.44772 5.44772 9 6 9H7C7.55228 9 8 9.44771 8 10V18C8 18.5523 7.55228 19 7 19H6C5.44772 19 5 18.5523 5 18V10Z" fill="#3661e2"></path> <path d="M11 19H12C12.5523 19 13 18.5523 13 18V13.5C13 12 16 11 16 13V18.0004C16 18.5527 16.4477 19 17 19H18C18.5523 19 19 18.5523 19 18V12C19 10 17.5 9 15.5 9C13.5 9 13 10.5 13 10.5V10C13 9.44771 12.5523 9 12 9H11C10.4477 9 10 9.44772 10 10V18C10 18.5523 10.4477 19 11 19Z" fill="#3661e2"></path> <path fill-rule="evenodd" clip-rule="evenodd" d="M20 1C21.6569 1 23 2.34315 23 4V20C23 21.6569 21.6569 23 20 23H4C2.34315 23 1 21.6569 1 20V4C1 2.34315 2.34315 1 4 1H20ZM20 3C20.5523 3 21 3.44772 21 4V20C21 20.5523 20.5523 21 20 21H4C3.44772 21 3 20.5523 3 20V4C3 3.44772 3.44772 3 4 3H20Z" 
+                fill="#3661e2"></path> </g></svg>
+        </div>
+      </div>
+
+      <div class="flex flex-col items-center">
+        <h3 class="text-white font-bold text-2xl">Explore</h3>
+        <ul>
+          <li class="text-gray-300 pt-3">
+
+           <a href="#">Home</a>
+          </li>
+          <li class="text-gray-300 pt-3">
+
+            <a href="#">Courses</a>
+           </li>
+           <li class="text-gray-300 pt-3">
+
+            <a href="#">Instructor</a>
+           </li>
+           <li class="text-gray-300 pt-3">
+
+            <a href="#">Contact</a>
+           </li>
+
+        </ul>
+
+      </div>
+
+      <div class="flex flex-col items-center">
+        <h3 class="text-white font-bold text-2xl">Category</h3>
+        <ul>
+          <li class="text-gray-300 pt-3">
+
+           <a href="#">Design</a>
+          </li>
+          <li class="text-gray-300 pt-3">
+
+            <a href="#">Development</a>
+           </li>
+           <li class="text-gray-300 pt-3">
+
+            <a href="#">Marketing</a>
+           </li>
+           <li class="text-gray-300 pt-3">
+
+            <a href="#">Business</a>
+           </li>
+
+           <li class="text-gray-300 pt-3">
+
+            <a href="#">LifeStyle</a>
+           </li>
+           <li class="text-gray-300 pt-3">
+
+            <a href="#">Photography</a>
+           </li>
+
+           <li class="text-gray-300 pt-3">
+
+            <a href="#">Music</a>
+           </li>
+
+           
+
+        </ul>
+
+      </div>
+
+      <div class="flex flex-col ">
+        <h3 class="text-white font-bold text-2xl pb-3">Subscribe</h3>
+        <p class="text-gray-300">Lorem Ipsum has been them an industry printer took a galley make book.</p>
+        <form class="mt-5">
+          <input type="email" placeholder="Enter your email" class="w-full p-3 mb-3 rounded-md border-gray-300 focus:outline-none bg-white">
+          <button type="submit" class="w-full text-white p-3  rounded-md bg-blue-600 hover:bg-blue-700">Subscribe</button>
+        </form>
+      </div>
+
+
+
+    </div>
+
+  </div>
+
+
+</footer>
+
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script defer src="/dist/index.js"></script>
+  
+<script>
+  AOS.init();
+</script>
+</body>
+
+</html>

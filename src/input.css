@@ -1,0 +1,20 @@
+@import "tailwindcss";
+
+:root{
+    --color-primary: #6176F7 ;
+    --color-paleyellow : #FFC27A;
+    
+}
+
+.bg-primary {
+    background-color: var(--color-primary);
+}
+.text-primary {
+    color: var(--color-primary);
+}
+
+.text-paleyellow{
+    color: var(--color-paleyellow);
+}
+
+
